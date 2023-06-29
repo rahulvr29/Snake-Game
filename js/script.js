@@ -44,3 +44,6 @@ const changeDirection = e => {
       velocityY = 0;
   }
 }
+
+// click event on arrow button
+controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
