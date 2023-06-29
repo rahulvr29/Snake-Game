@@ -14,3 +14,16 @@ let score = 0;
 // get high score
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
+
+const updateFoodPosition = () => {
+  // passing food position
+  foodX = Math.floor(Math.random() * 30) + 1;
+  foodY = Math.floor(Math.random() * 30) + 1;
+}
+
+// reloading game over
+const handleGameOver = () => {
+  clearInterval(setIntervalId);
+  alert("Game Over! Press OK to replay...");
+  location.reload();
+}
