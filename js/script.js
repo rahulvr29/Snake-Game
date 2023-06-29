@@ -48,6 +48,7 @@ const changeDirection = e => {
 // click event on arrow button
 controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
 
+//  main function of game 
 const initGame = () => {
   if(gameOver) return handleGameOver();
   let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
